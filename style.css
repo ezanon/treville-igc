@@ -1,4 +1,4 @@
-*/ 
+/*
 Theme Name: Treville IGc (desenvolvendo)
 Theme URL: http://hostinger-tutorials.com 
 Description: Treville Child Theme for IGc
@@ -7,4 +7,8 @@ Author URL: https://github.com/ezanon
 Template: treville
 Version: 1.0.0 
 Text Domain: treville-igc 
-*/ Custom CSS goes after this line
+*/ 
+
+.wp-block-image .aligncenter {
+    margin: auto;
+}
