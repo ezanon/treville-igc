@@ -5,10 +5,66 @@ Description: Treville Child Theme for IGc
 Author: John Doe, Erickson Zanon
 Author URL: https://github.com/ezanon
 Template: treville
-Version: 1.0.0 
+Version: 0.1.0 
 Text Domain: treville-igc 
 */ 
 
+/**********************************
+/*Ajustes WP
+/**********************************/
+
+/* imagem alinhada a esquerda do texto */
+.wp-block-image .alignleft {
+    margin-right: 2em;
+}
+
+/* imagem alinhada a esquerda do texto */
+.wp-block-image .alignright {
+    margin-left: 2em;
+}
+
+/* ? */
 .wp-block-image .aligncenter {
     margin: auto;
+}
+
+/* link para arquivos */
+.wp-block-file {
+    background-color: whitesmoke;
+    padding: 5px 10px 5px 15px;
+}
+.wp-block-file::before {
+    content: ">> ";
+}
+
+.more-link {
+    float: right;
+}
+
+/**********************************
+/*Portal
+/**********************************/
+
+/* post dos posts dos subsites no portal - id 756 pt, 761 en, 763 es - plugin network posts ext */
+#post-756, #post-761, #post-763 {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+#post-756 .entry-header, #post-761 .entry-header, #post-763 .entry-header {
+    padding: 0;
+}
+#post-756 .entry-header .page-title, #post-761 .entry-header .page-title, #post-763 .entry-header .page-title {
+    padding: 0 1em 1em 1em;
+    margin: 0 0.15em 0 0.2em;
+}
+#post-756 .entry-categories, #post-761 .entry-categories, #post-763 .entry-categories {
+    padding: 0;
+    margin: 0;
+}
+#post-756 header.entry-header h1.page-title, #post-761 header.entry-header h1.page-title, #post-763 header.entry-header h1.page-title {
+    padding: 0 1em 0 0.8em;
+}
+#post-756 article, #post-761 article, #post-763 article {
+    padding: 1em;
 }
