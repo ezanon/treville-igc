@@ -65,6 +65,9 @@ Text Domain: treville-igc
 #post-756 header.entry-header h1.page-title, #post-761 header.entry-header h1.page-title, #post-763 header.entry-header h1.page-title {
     padding: 0 1em 0 0.8em;
 }
+#post-756 h2.entry-title, #post-761 h2.entry-title, #post-763 h2.entry-title {
+    font-size: 1.5rem;
+}
 #post-756 article, #post-761 article, #post-763 article {
     padding: 1em;
 }
