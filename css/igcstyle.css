@@ -1,0 +1,39 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 31/01/2019, 11:36:14
+    Author     : Erickson Zanon
+*/
+/* Paleta de cores */
+/* Tipografia */
+/* Background escuro */
+/* Cabecalho Home */
+#cabecalhoHome {
+  background: #343a40;
+  padding: 10px;
+  color: #fcfcfc; }
+
+#oLogotipo {
+  max-height: 80px; }
+
+/* Estrutura */
+body {
+  background: #dddddd; }
+
+/*! Banner */
+#bannerRow {
+  margin: 0 0 10px 0;
+  text-align: center;
+  background: #fcfcfc; }
+
+#bannerRow .col-12 {
+  padding: 0; }
+
+/* Bootstrap */
+.row {
+  margin-bottom: 10px; }
+
+/*# sourceMappingURL=igcstyle.css.map */

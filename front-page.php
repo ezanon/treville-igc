@@ -7,19 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
-    <?php wp_head(); ?>
+    <!-- IGc -->
+    <link href="wp-content/themes/treville-igc/css/igcstyle.css" rel="stylesheet" type="text/css"/>
     
   </head>
   <body>
-      <div class="container">
-          <div id="mainRow" class="row p-1">
-              <div class="col-sm-4">                  
-                  <img id="logotipo" class="img-fluid mx-auto my-3" src="/wp-content/themes/treville-igc/igcLogotipoPBFundoTransparente.png" alt=""/>
-              </div>
-              <div class="col-sm">
-                  
-                  <?php 
+      
+<!-- cabecalho -->     
+<div id="cabecalhoHome" class="container-fluid">
+    <nav class="navbar navbar-expand-md rounded navbar-dark bg-dark" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <img id="oLogotipo" class="img-fluid mx-auto my-1" src="/wp-content/themes/treville-igc/igcLogotipoPBFundoTransparente.png" alt=""/>
+            </a>
+            <?php
+            wp_nav_menu( array(
+                    'theme_location'    => 'mainMenu',
+                    'depth'             => 2,
+                    'container'         => 'div',
+                    'container_class'   => 'collapse navbar-collapse',
+                    'container_id'      => 'bs-example-navbar-collapse-1',
+                    'menu_class'        => 'nav navbar-nav',
+                    'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                    'walker'            => new WP_Bootstrap_Navwalker(),
+            ) );
+            ?>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+    </nav>
+</div>
+
+<!-- banner -->
+<div id="bannerRow" class="container-fluid">    
+        
+            <?php 
                   // banner *start*                  
                   $my_args_banner = array(
                       'post_type' => 'banners',
@@ -28,8 +54,8 @@
                   $my_query_banner = new WP_Query($my_args_banner);
                   if ($my_query_banner->have_posts()) {
                   ?>    
-                  <div id="bannerRow" class="row">
-                      <div class="col-12 mb-5">
+                  <div class="row">
+                      <div class="col-12">
                           <div id="carouselBanners" class="carousel slide" data-ride="carousel">
                               <div class="carousel-inner">    
                   <?php
@@ -37,11 +63,15 @@
                       while ($my_query_banner->have_posts()) {
                           $contapost++;
                           $my_query_banner->the_post();  
+                          $link = get_post_meta( $post->ID, 'Link', TRUE );
                   ?>        
-                            <div class="carousel-item <?php if ($contapost == 1) echo 'active'; ?>">
-                                <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid d-block rounded')); ?>
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5 class="invisible"><?php the_title(); ?></h5>
+                            <div class="carousel-item mx-auto <?php if ($contapost == 1) echo 'active'; ?>">
+                                <a href="<?php echo $link; ?>">
+                                    <?php the_post_thumbnail('bannerImage', array('class' => 'img-fluid d-block mx-auto align-middle rounded')); ?>
+                                </a>
+                                <div class="carousel-caption d-none d-md-block invisible">
+                                    <h5><?php the_title(); ?></h5>
+                                    <?php the_excerpt(); ?>
                                 </div>
                             </div> 
                   <?php
@@ -63,119 +93,12 @@
                   </div>                
                   <?php
                   }   
-                  wp_reset_query();
-                  //banner *end* 
-                  ?>                                                  
-                  
-                  <div class="row align-items-start">
-                      <div class="col-12 col-sm-8">
-                          <div class="card">
-                              <div class="card-body">
-                                  <h5 class="card-title">Special title treatment</h5>
-                                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-sm">
-                          <div class="card">
-                              <div class="card-body">
-                                  <h5 class="card-title">Special title treatment</h5>
-                                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="row align-items-start">
-                      <div class="col-sm">
-                          <div class="card">
-                              <div class="card-body">
-                                  <h5 class="card-title">Special title treatment</h5>
-                                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-sm"><div class="card">
-                              <div class="card-body">
-                                  <h5 class="card-title">Special title treatment</h5>
-                                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-sm">
-                          <div class="card">
-                              <div class="card-body">
-                                  <h5 class="card-title">Special title treatment</h5>
-                                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="row align-items-start">
-                      <div class="col-sm-4">
-                      <div class="card">
-                              <div class="card-body">
-                                  <h5 class="card-title">Special title treatment</h5>
-                                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-sm">
-                      <div class="card">
-                              <div class="card-body">
-                                  <h5 class="card-title">Special title treatment</h5>
-                                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="row align-items-start">
-                      <div class="col-sm">
-                      <div class="card">
-                              <div class="card-body">
-                                  <h5 class="card-title">Special title treatment</h5>
-                                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-sm">
-                      <div class="card">
-                              <div class="card-body">
-                                  <h5 class="card-title">Special title treatment</h5>
-                                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-sm">
-                      <div class="card">
-                              <div class="card-body">
-                                  <h5 class="card-title">Special title treatment</h5>
-                                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-sm">
-                      <div class="card">
-                              <div class="card-body">
-                                  <h5 class="card-title">Special title treatment</h5>
-                                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
+                  wp_reset_query(); 
+                  ?>          
+
+</div><!-- banner fim -->
+    
+
 
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
