@@ -16,20 +16,19 @@
 <!-- cabecalho -->     
 <div id="cabecalhoHome" class="container-fluid">
     <nav class="navbar navbar-expand-md rounded navbar-dark bg-dark" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-            </button>
             <a class="navbar-brand" href="/">
                 <img id="oLogotipo" class="img-fluid mx-auto my-1" src="/wp-content/themes/treville-igc/igcLogotipoPBFundoTransparente.png" alt=""/>
             </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+            </button>
             <?php
             wp_nav_menu( array(
                     'theme_location'    => 'mainMenu',
                     'depth'             => 2,
                     'container'         => 'div',
                     'container_class'   => 'collapse navbar-collapse',
-                    'container_id'      => 'bs-example-navbar-collapse-1',
+                    'container_id'      => 'mainNavbar',
                     'menu_class'        => 'nav navbar-nav',
                     'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                     'walker'            => new WP_Bootstrap_Navwalker(),
@@ -67,7 +66,7 @@
                   ?>        
                             <div class="carousel-item mx-auto <?php if ($contapost == 1) echo 'active'; ?>">
                                 <a href="<?php echo $link; ?>">
-                                    <?php the_post_thumbnail('bannerImage', array('class' => 'img-fluid d-block mx-auto align-middle rounded')); ?>
+                                    <?php the_post_thumbnail('bannerImage', array('class' => 'img-fluid d-block mx-auto align-middle')); ?>
                                 </a>
                                 <div class="carousel-caption d-none d-md-block invisible">
                                     <h5><?php the_title(); ?></h5>
@@ -97,7 +96,109 @@
                   ?>          
 
 </div><!-- banner fim -->
+
+<!-- cards -->
+<div id='cardsContainer' class="container">
+<div class="row">
+    <div class="card col-md-12 col-sm-6 col-12" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    <div class="card col-md-6 col-sm-6 col-12" style="width: 18rem;">
+      <img src="http://sites.igc.usp.br/wp-content/uploads/2019/01/Darwin-Day-768x576.png" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    <div class="card col-md-3 col-sm-6 col-12" style="width: 18rem;">
+      <img src="http://sites.igc.usp.br/wp-content/uploads/2019/01/Darwin-Day-768x576.png" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div><div class="card col-md-3 col-sm-6 col-12" style="width: 18rem;">
+      <img src="http://sites.igc.usp.br/wp-content/uploads/2019/01/Darwin-Day-768x576.png" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div><div class="card col-md-3 col-sm-6 col-12" style="width: 18rem;">
+      <img src="http://sites.igc.usp.br/wp-content/uploads/2019/01/Darwin-Day-768x576.png" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div><div class="card col-md-3 col-sm-6 col-12" style="width: 18rem;">
+      <img src="http://sites.igc.usp.br/wp-content/uploads/2019/01/Darwin-Day-768x576.png" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div><div class="card col-md-3 col-sm-6 col-12" style="width: 18rem;">
+      <img src="http://sites.igc.usp.br/wp-content/uploads/2019/01/Darwin-Day-768x576.png" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div><div class="card col-md-3 col-sm-6 col-12" style="width: 18rem;">
+      <img src="http://sites.igc.usp.br/wp-content/uploads/2019/01/Darwin-Day-768x576.png" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div><div class="card col-md-3 col-sm-6 col-12" style="width: 18rem;">
+      <img src="http://sites.igc.usp.br/wp-content/uploads/2019/01/Darwin-Day-768x576.png" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div><div class="card col-md-3 col-sm-6 col-12" style="width: 18rem;">
+      <img src="http://sites.igc.usp.br/wp-content/uploads/2019/01/Darwin-Day-768x576.png" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div><div class="card col-md-3 col-sm-6 col-12" style="width: 18rem;">
+      <img src="http://sites.igc.usp.br/wp-content/uploads/2019/01/Darwin-Day-768x576.png" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div><div class="card col-md-3 col-sm-6 col-12" style="width: 18rem;">
+      <img src="http://sites.igc.usp.br/wp-content/uploads/2019/01/Darwin-Day-768x576.png" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
     
+</div>    
+</div>
+<!-- cards fim -->
+
+
+<!-- rodape -->
+
+<div id="rodapeRow" class="sticky-top">
+    RODAPÉ
+</div>
+
+<!-- rodape fim -->
 
 
       <!-- Optional JavaScript -->

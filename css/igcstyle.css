@@ -29,6 +29,20 @@ body {
   text-align: center;
   background: #fcfcfc; }
 
+/* Cards */
+#cardsContainer {
+  padding: 10px 20px 0 20px; }
+
+#cardsContainer .card {
+  margin: 0 0 10px 0;
+  padding: 5px; }
+
+/* Rodape */
+#rodapeRow {
+  background: #343a40;
+  padding: 10px;
+  color: #fcfcfc; }
+
 #bannerRow .col-12 {
   padding: 0; }
 

@@ -39,6 +39,19 @@ body {
     text-align: center;
     background: $branco;
 }
+/* Cards */
+#cardsContainer {
+    padding: 10px 20px 0 20px;
+}
+#cardsContainer .card {
+    margin: 0 0 10px 0;
+    padding: 5px;
+}
+/* Rodape */
+#rodapeRow {
+    @include darkBack;
+    @include textDarkBack;
+}
 #bannerRow .col-12 {
     padding: 0;
 }
