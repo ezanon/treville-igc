@@ -12,26 +12,63 @@ and open the template in the editor.
 $preto : #343a40;
 $branco : #fcfcfc;
 $cinza : #dddddd;
+$color1 : #ed8838; // laranja vivo
+$color2 : #734719; // laranja escuro
+$color3 : #50564a; // verde escuro
+$color4 : #61675b; // verde medio
+$color5 : #7c8574; // verde claro
+
+.color2 {
+    background-color: $color2;
+}
+.color3 {
+    background-color: $color3;
+}
+.color5 {
+    background-color: $color5;
+}
+
 /* Tipografia */
 @mixin textDarkBack {
     color: $branco;
 }
 /* Background escuro */
 @mixin darkBack {
-    background: $preto;
-    padding: 10px; 
+    background: $color5;
 }
 /* Cabecalho Home */
 #cabecalhoHome {
     @include darkBack;
     @include textDarkBack;
+    padding-left: 0;
+    padding-right: 0;
 }
 #oLogotipo {
     max-height: 80px;
 }
+#botaoBusca {
+    color: $branco;
+    background-color: transparent;
+    background-image: none;
+    margin: 0;
+    padding: 0;
+}
+/* Navegação principal */
+#mainNavbar {
+    font-size: 1.2rem;
+}
+#mainNavbar a {
+    color: $branco;
+}
+#mainNavbar a.dropdown-item {
+    color: $preto;
+}
+#mainNavbar a:hover {
+    color: $color1;
+}
 /* Estrutura */
 body {
-    background: $cinza;
+    background: $color5;
 }
 /*! Banner */
 #bannerRow {
@@ -51,6 +88,7 @@ body {
 #rodapeRow {
     @include darkBack;
     @include textDarkBack;
+    padding: 10px; 
 }
 #bannerRow .col-12 {
     padding: 0;

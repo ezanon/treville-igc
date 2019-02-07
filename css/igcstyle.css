@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -8,20 +9,50 @@ and open the template in the editor.
     Author     : Erickson Zanon
 */
 /* Paleta de cores */
+.color2 {
+  background-color: #734719; }
+
+.color3 {
+  background-color: #50564a; }
+
+.color5 {
+  background-color: #7c8574; }
+
 /* Tipografia */
 /* Background escuro */
 /* Cabecalho Home */
 #cabecalhoHome {
-  background: #343a40;
-  padding: 10px;
-  color: #fcfcfc; }
+  background: #7c8574;
+  color: #fcfcfc;
+  padding-left: 0;
+  padding-right: 0; }
 
 #oLogotipo {
   max-height: 80px; }
 
+#botaoBusca {
+  color: #fcfcfc;
+  background-color: transparent;
+  background-image: none;
+  margin: 0;
+  padding: 0; }
+
+/* Navega├º├úo principal */
+#mainNavbar {
+  font-size: 1.2rem; }
+
+#mainNavbar a {
+  color: #fcfcfc; }
+
+#mainNavbar a.dropdown-item {
+  color: #343a40; }
+
+#mainNavbar a:hover {
+  color: #ed8838; }
+
 /* Estrutura */
 body {
-  background: #dddddd; }
+  background: #7c8574; }
 
 /*! Banner */
 #bannerRow {
@@ -39,9 +70,9 @@ body {
 
 /* Rodape */
 #rodapeRow {
-  background: #343a40;
-  padding: 10px;
-  color: #fcfcfc; }
+  background: #7c8574;
+  color: #fcfcfc;
+  padding: 10px; }
 
 #bannerRow .col-12 {
   padding: 0; }

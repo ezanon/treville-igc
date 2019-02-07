@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- icones -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- IGc -->
     <link href="wp-content/themes/treville-igc/css/igcstyle.css" rel="stylesheet" type="text/css"/>
     
@@ -15,30 +17,41 @@
       
 <!-- cabecalho -->     
 <div id="cabecalhoHome" class="container-fluid">
-    <nav class="navbar navbar-expand-md rounded navbar-dark bg-dark" role="navigation">
-            <a class="navbar-brand" href="/">
-                <img id="oLogotipo" class="img-fluid mx-auto my-1" src="/wp-content/themes/treville-igc/igcLogotipoPBFundoTransparente.png" alt=""/>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-            </button>
-            <?php
-            wp_nav_menu( array(
-                    'theme_location'    => 'mainMenu',
-                    'depth'             => 2,
-                    'container'         => 'div',
-                    'container_class'   => 'collapse navbar-collapse',
-                    'container_id'      => 'mainNavbar',
-                    'menu_class'        => 'nav navbar-nav',
-                    'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-                    'walker'            => new WP_Bootstrap_Navwalker(),
-            ) );
-            ?>
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+   
+    
+    <nav class="navbar container">
+        <a class="navbar-brand">
+            <img id="oLogotipo" class="img-fluid mx-auto my-1" src="/wp-content/themes/treville-igc/igcLogotipoPBFundoTransparente.png" alt=""/>
+        </a>
+        <form role='search' method="get" class="form-inline" action="https://google.com/search">
+            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search" name='q'>
+            <button id='botaoBusca' class="btn my-2 my-sm-0" type="submit"><i class="material-icons">search</i></button>
+            <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+            <input type='hidden' name="sitesearch" value="igc.usp.br">
+        </form>           
     </nav>
+    
+        <nav class="navbar navbar-expand-md color3">
+            <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+ 
+            <?php
+                wp_nav_menu( array(
+                        'theme_location'    => 'mainMenu',
+                        'depth'             => 2,
+                        'container'         => 'div',
+                        'container_class'   => 'collapse navbar-collapse',
+                        'container_id'      => 'mainNavbar',
+                        'menu_class'        => 'nav navbar-nav',
+                        'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                        'walker'            => new WP_Bootstrap_Navwalker(),
+                ) );
+                ?>
+            </div>                     
+        </nav>
+                 
 </div>
 
 <!-- banner -->
@@ -102,9 +115,8 @@
 <div class="row">
     <div class="card col-md-12 col-sm-6 col-12" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">Dedetização</h5>
+        <p class="card-text">O Instituto não abrirá dia 23/02, sábado, para dedetização das dependências do prédio.</p>
       </div>
     </div>
     <div class="card col-md-6 col-sm-6 col-12" style="width: 18rem;">
