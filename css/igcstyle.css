@@ -9,11 +9,18 @@ and open the template in the editor.
     Author     : Erickson Zanon
 */
 /* Paleta de cores */
+.color1 {
+  background-color: #ed8838; }
+
 .color2 {
   background-color: #734719; }
 
 .color3 {
-  background-color: #50564a; }
+  background-color: #50564a;
+  color: #fcfcfc; }
+
+.color4 {
+  background-color: #61675b; }
 
 .color5 {
   background-color: #7c8574; }
@@ -22,13 +29,13 @@ and open the template in the editor.
 /* Background escuro */
 /* Cabecalho Home */
 #cabecalhoHome {
-  background: #7c8574;
   color: #fcfcfc;
+  background-color: #fcfcfc;
   padding-left: 0;
   padding-right: 0; }
 
 #oLogotipo {
-  max-height: 80px; }
+  max-height: 110px; }
 
 #botaoBusca {
   color: #fcfcfc;
@@ -39,7 +46,7 @@ and open the template in the editor.
 
 /* Navega├º├úo principal */
 #mainNavbar {
-  font-size: 1.2rem; }
+  font-size: 1rem; }
 
 #mainNavbar a {
   color: #fcfcfc; }
@@ -50,6 +57,38 @@ and open the template in the editor.
 #mainNavbar a:hover {
   color: #ed8838; }
 
+/* Menu superior */
+#menuSuperior {
+  background-color: #50564a; }
+
+/* Menu Idiomas */
+#menuIdiomas {
+  font-size: 0.8rem;
+  float: right; }
+
+#menuIdiomas a {
+  color: #fcfcfc; }
+
+#menuIdiomas a.dropdown-item {
+  color: #343a40; }
+
+#menuIdiomas a:hover {
+  color: #ed8838; }
+
+/* Menu Social */
+#menuSocial {
+  font-size: 0.8rem;
+  float: left; }
+
+#menuSocial a {
+  color: #fcfcfc; }
+
+#menuSocial a.dropdown-item {
+  color: #343a40; }
+
+#menuSocial a:hover {
+  color: #ed8838; }
+
 /* Estrutura */
 body {
   background: #7c8574; }
@@ -58,7 +97,13 @@ body {
 #bannerRow {
   margin: 0 0 10px 0;
   text-align: center;
-  background: #fcfcfc; }
+  background: #fcfcfc;
+  height: 300px;
+  max-height: 300px;
+  min-height: 300px; }
+
+#bannerRow img {
+  height: 300px; }
 
 /* Cards */
 #cardsContainer {
@@ -66,16 +111,18 @@ body {
 
 #cardsContainer .card {
   margin: 0 0 10px 0;
-  padding: 5px; }
+  padding: 5px;
+  background-color: #fcfcfc;
+  border: 5px;
+  border-color: #7c8574;
+  border-style: solid;
+  border-radius: 0.5rem; }
 
 /* Rodape */
 #rodapeRow {
-  background: #7c8574;
   color: #fcfcfc;
+  background-color: #50564a;
   padding: 10px; }
-
-#bannerRow .col-12 {
-  padding: 0; }
 
 /* Bootstrap */
 .row {

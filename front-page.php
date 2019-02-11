@@ -13,15 +13,48 @@
     <link href="wp-content/themes/treville-igc/css/igcstyle.css" rel="stylesheet" type="text/css"/>
     
   </head>
-  <body>
+
+<body>
+      
+<!-- menus auxiliares -->
+<div id='menuSuperior' class="container-fluid color3">
+    <nav id='menuIdiomas' class="navbar navbar-expand-md color3">
+        <?php
+            wp_nav_menu( array(
+                    'theme_location'    => 'idiomasMenu',
+                    'depth'             => 2,
+                    'container'         => 'div',
+                    'container_class'   => 'collapse navbar-collapse',
+                    'container_id'      => 'idiomasNavbar',
+                    'menu_class'        => 'nav navbar-nav',
+                    'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                    'walker'            => new WP_Bootstrap_Navwalker(),
+            ) );
+        ?>
+    </nav>
+    <nav id='menuSocial' class="navbar navbar-expand-md color3">
+        <?php
+            wp_nav_menu( array(
+                    'theme_location'    => 'socialMenu',
+                    'depth'             => 2,
+                    'container'         => 'div',
+                    'container_class'   => 'collapse navbar-collapse',
+                    'container_id'      => 'socialNavbar',
+                    'menu_class'        => 'nav navbar-nav',
+                    'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                    'walker'            => new WP_Bootstrap_Navwalker(),
+            ) );
+        ?>
+    </nav>
+</div>
       
 <!-- cabecalho -->     
 <div id="cabecalhoHome" class="container-fluid">
    
     
     <nav class="navbar container">
-        <a class="navbar-brand">
-            <img id="oLogotipo" class="img-fluid mx-auto my-1" src="/wp-content/themes/treville-igc/igcLogotipoPBFundoTransparente.png" alt=""/>
+        <a class="navbar-brand" href="/">
+            <img id="oLogotipo" class="img-fluid mx-auto my-1" src="/wp-content/themes/treville-igc/logo_IGc_colorido.png" alt=""/>
         </a>
         <form role='search' method="get" class="form-inline" action="https://google.com/search">
             <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search" name='q'>
@@ -31,7 +64,7 @@
         </form>           
     </nav>
     
-        <nav class="navbar navbar-expand-md color3">
+        <nav class="navbar navbar-expand-md color2">
             <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -44,7 +77,7 @@
                         'container'         => 'div',
                         'container_class'   => 'collapse navbar-collapse',
                         'container_id'      => 'mainNavbar',
-                        'menu_class'        => 'nav navbar-nav',
+                        'menu_class'        => 'nav navbar-nav text-uppercase',
                         'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                         'walker'            => new WP_Bootstrap_Navwalker(),
                 ) );
@@ -113,7 +146,7 @@
 <!-- cards -->
 <div id='cardsContainer' class="container">
 <div class="row">
-    <div class="card col-md-12 col-sm-6 col-12" style="width: 18rem;">
+    <div class="card col-md-12 col-sm-6 col-12"">
       <div class="card-body">
         <h5 class="card-title">Dedetização</h5>
         <p class="card-text">O Instituto não abrirá dia 23/02, sábado, para dedetização das dependências do prédio.</p>
@@ -205,18 +238,19 @@
 
 
 <!-- rodape -->
-
-<div id="rodapeRow" class="sticky-top">
-    RODAPÉ
+<div class="container">
+     <div id="rodapeRow" class="sticky-top">
+        RODAPÉ
+    </div>
 </div>
-
 <!-- rodape fim -->
 
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+</body>
 
-      <!-- Optional JavaScript -->
-      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
 </html>

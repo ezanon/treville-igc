@@ -18,11 +18,18 @@ $color3 : #50564a; // verde escuro
 $color4 : #61675b; // verde medio
 $color5 : #7c8574; // verde claro
 
+.color1 {
+    background-color: $color1;
+}
 .color2 {
     background-color: $color2;
 }
 .color3 {
     background-color: $color3;
+    color: $branco;
+}
+.color4 {
+    background-color: $color4;
 }
 .color5 {
     background-color: $color5;
@@ -38,13 +45,13 @@ $color5 : #7c8574; // verde claro
 }
 /* Cabecalho Home */
 #cabecalhoHome {
-    @include darkBack;
-    @include textDarkBack;
+    color: $branco;
+    background-color: $branco;
     padding-left: 0;
     padding-right: 0;
 }
 #oLogotipo {
-    max-height: 80px;
+    max-height: 110px;
 }
 #botaoBusca {
     color: $branco;
@@ -55,7 +62,7 @@ $color5 : #7c8574; // verde claro
 }
 /* Navegação principal */
 #mainNavbar {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 #mainNavbar a {
     color: $branco;
@@ -64,6 +71,38 @@ $color5 : #7c8574; // verde claro
     color: $preto;
 }
 #mainNavbar a:hover {
+    color: $color1;
+}
+/* Menu superior */
+#menuSuperior {
+    background-color: $color3;
+}
+/* Menu Idiomas */
+#menuIdiomas {
+    font-size: 0.8rem;
+    float: right;
+}
+#menuIdiomas a {
+    color: $branco;
+}
+#menuIdiomas a.dropdown-item {
+    color: $preto;
+}
+#menuIdiomas a:hover {
+    color: $color1;
+}
+/* Menu Social */
+#menuSocial {
+    font-size: 0.8rem;
+    float: left;
+}
+#menuSocial a {
+    color: $branco;
+}
+#menuSocial a.dropdown-item {
+    color: $preto;
+}
+#menuSocial a:hover {
     color: $color1;
 }
 /* Estrutura */
@@ -75,6 +114,12 @@ body {
     margin: 0 0 10px 0;
     text-align: center;
     background: $branco;
+    height: 300px;
+    max-height: 300px;
+    min-height: 300px;
+}
+#bannerRow img {
+    height: 300px;
 }
 /* Cards */
 #cardsContainer {
@@ -83,15 +128,17 @@ body {
 #cardsContainer .card {
     margin: 0 0 10px 0;
     padding: 5px;
+    background-color: $branco;
+    border: 5px;
+    border-color: $color5;
+    border-style: solid;
+    border-radius: 0.5rem;
 }
 /* Rodape */
 #rodapeRow {
-    @include darkBack;
-    @include textDarkBack;
+    color: $branco;
+    background-color: $color3;
     padding: 10px; 
-}
-#bannerRow .col-12 {
-    padding: 0;
 }
 /* Bootstrap */
 .row {

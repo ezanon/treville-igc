@@ -34,11 +34,13 @@ require_once 'wp-bootstrap-navwalker-master/class-wp-bootstrap-navwalker.php';
 register_nav_menus( array(
         'mainMenu' => __('igc Menu Principal','treville-igc'),
         'socialMenu' => __('igc Menu Mídias Sociais','treville-igc'),
-        'superiorMenu' => __('igc Menu Superior','treville-igc')
+        'idiomasMenu' => __('igc Menu Idiomas','treville-igc'),
+        'superiorMenu' => __('igc Menu Superior','treville-igc'),
+    
     ));
 
 // adiciona tamanhos de imagens personalizados
-add_image_size('bannerImage', 800, 400, true); //1100x600 16:9; 1000x500 2:1
+add_image_size('bannerImage', 1100/2, 600/2, true); //1100x600 16:9; 1000x500 2:1
 
 
 
