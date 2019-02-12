@@ -24,13 +24,29 @@ function create_post_type() {
         'rewrite' => array('slug' => 'banners')
             )
     );
+    register_post_type('historico', array(
+        'labels' => array(
+            'name' => __('Histórico'),
+            'singular_name' => __('História')
+        ),
+        'supports' => array(
+            'title', 'custom-fields'
+        ),
+        'public' => true,
+        'exclude_from_search' => false,
+        'menu_position' => 5,
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-images-alt2',
+        'rewrite' => array('slug' => 'historico')
+            )
+    );
 }
 add_action('init', 'create_post_type');
 
 // registra custom navigation walker
 require_once 'wp-bootstrap-navwalker-master/class-wp-bootstrap-navwalker.php';
 
-// Criar menu principal
+// Criar menus
 register_nav_menus( array(
         'mainMenu' => __('igc Menu Principal','treville-igc'),
         'socialMenu' => __('igc Menu Mídias Sociais','treville-igc'),

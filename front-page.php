@@ -73,7 +73,7 @@
             <?php
                 wp_nav_menu( array(
                         'theme_location'    => 'mainMenu',
-                        'depth'             => 2,
+                        'depth'             => 3,
                         'container'         => 'div',
                         'container_class'   => 'collapse navbar-collapse',
                         'container_id'      => 'mainNavbar',
