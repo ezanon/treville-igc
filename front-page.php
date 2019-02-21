@@ -18,7 +18,7 @@
       
 <!-- menus auxiliares -->
 <div id='menuSuperior' class="container-fluid color3">
-    <nav id='menuIdiomas' class="navbar navbar-expand-md color3">
+    <nav id='menuIdiomas' class="navbar navbar-expand-md">
         <?php
             wp_nav_menu( array(
                     'theme_location'    => 'idiomasMenu',
@@ -32,7 +32,8 @@
             ) );
         ?>
     </nav>
-    <nav id='menuSocial' class="navbar navbar-expand-md color3">
+
+    <nav id='menuSocial' class="navbar navbar-expand-md">
         <?php
             wp_nav_menu( array(
                     'theme_location'    => 'socialMenu',
@@ -77,7 +78,7 @@
                         'container'         => 'div',
                         'container_class'   => 'collapse navbar-collapse',
                         'container_id'      => 'mainNavbar',
-                        'menu_class'        => 'nav navbar-nav text-uppercase',
+                        'menu_class'        => 'nav navbar-nav',
                         'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                         'walker'            => new WP_Bootstrap_Navwalker(),
                 ) );
@@ -152,78 +153,14 @@
         <p class="card-text">O Instituto não abrirá dia 23/02, sábado, para dedetização das dependências do prédio.</p>
       </div>
     </div>
-    <div class="card col-md-6 col-sm-6 col-12" style="width: 18rem;">
-      <img src="http://sites.igc.usp.br/wp-content/uploads/2019/01/Darwin-Day-768x576.png" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
+    
+    <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+        <?php get_template_part('content','card'); ?>
+    <?php endwhile; ?>
+    <?php endif; ?>
+    
+    
     <div class="card col-md-3 col-sm-6 col-12" style="width: 18rem;">
-      <img src="http://sites.igc.usp.br/wp-content/uploads/2019/01/Darwin-Day-768x576.png" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div><div class="card col-md-3 col-sm-6 col-12" style="width: 18rem;">
-      <img src="http://sites.igc.usp.br/wp-content/uploads/2019/01/Darwin-Day-768x576.png" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div><div class="card col-md-3 col-sm-6 col-12" style="width: 18rem;">
-      <img src="http://sites.igc.usp.br/wp-content/uploads/2019/01/Darwin-Day-768x576.png" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div><div class="card col-md-3 col-sm-6 col-12" style="width: 18rem;">
-      <img src="http://sites.igc.usp.br/wp-content/uploads/2019/01/Darwin-Day-768x576.png" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div><div class="card col-md-3 col-sm-6 col-12" style="width: 18rem;">
-      <img src="http://sites.igc.usp.br/wp-content/uploads/2019/01/Darwin-Day-768x576.png" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div><div class="card col-md-3 col-sm-6 col-12" style="width: 18rem;">
-      <img src="http://sites.igc.usp.br/wp-content/uploads/2019/01/Darwin-Day-768x576.png" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div><div class="card col-md-3 col-sm-6 col-12" style="width: 18rem;">
-      <img src="http://sites.igc.usp.br/wp-content/uploads/2019/01/Darwin-Day-768x576.png" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div><div class="card col-md-3 col-sm-6 col-12" style="width: 18rem;">
-      <img src="http://sites.igc.usp.br/wp-content/uploads/2019/01/Darwin-Day-768x576.png" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div><div class="card col-md-3 col-sm-6 col-12" style="width: 18rem;">
-      <img src="http://sites.igc.usp.br/wp-content/uploads/2019/01/Darwin-Day-768x576.png" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div><div class="card col-md-3 col-sm-6 col-12" style="width: 18rem;">
       <img src="http://sites.igc.usp.br/wp-content/uploads/2019/01/Darwin-Day-768x576.png" class="card-img-top">
       <div class="card-body">
         <h5 class="card-title">Card title</h5>

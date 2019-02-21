@@ -59,7 +59,8 @@ and open the template in the editor.
 
 /* Menu superior */
 #menuSuperior {
-  background-color: #50564a; }
+  background-color: #50564a;
+  min-height: 3rem; }
 
 /* Menu Idiomas */
 #menuIdiomas {

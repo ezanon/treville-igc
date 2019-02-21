@@ -1,10 +1,15 @@
 <?php 
 
 add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' ); 
-
 function enqueue_parent_styles() { 
     wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' ); 
 } 
+
+// adicionar formato de posts
+function igc_theme_support(){
+    add_theme_support('post-formats',array('aside','image'));
+}
+add_action('after_setup_theme','igc_theme_support');
 
 // Criar o tipo post para o banner
 function create_post_type() {

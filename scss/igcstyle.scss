@@ -38,6 +38,7 @@ $color5 : #7c8574; // verde claro
 /* Tipografia */
 @mixin textDarkBack {
     color: $branco;
+    background: $color5;
 }
 /* Background escuro */
 @mixin darkBack {
@@ -76,6 +77,7 @@ $color5 : #7c8574; // verde claro
 /* Menu superior */
 #menuSuperior {
     background-color: $color3;
+    min-height: 3rem;
 }
 /* Menu Idiomas */
 #menuIdiomas {
