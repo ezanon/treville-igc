@@ -112,7 +112,7 @@ body {
 
 #cardsContainer .card {
   margin: 0 0 10px 0;
-  padding: 5px;
+  padding: 0px;
   background-color: #fcfcfc;
   border: 5px;
   border-color: #7c8574;

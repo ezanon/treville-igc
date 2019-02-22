@@ -146,36 +146,27 @@
 
 <!-- cards -->
 <div id='cardsContainer' class="container">
-<div class="row">
-    <div class="card col-md-12 col-sm-6 col-12"">
-      <div class="card-body">
-        <h5 class="card-title">Dedetização</h5>
-        <p class="card-text">O Instituto não abrirá dia 23/02, sábado, para dedetização das dependências do prédio.</p>
-      </div>
-    </div>
-    
-    <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-        <?php get_template_part('content','card'); ?>
-    <?php endwhile; ?>
-    <?php endif; ?>
-    
-    
-    <div class="card col-md-3 col-sm-6 col-12" style="width: 18rem;">
-      <img src="http://sites.igc.usp.br/wp-content/uploads/2019/01/Darwin-Day-768x576.png" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    
-</div>    
+    <div class="row">
+        
+        <div class="card col-md-12 col-sm-6 col-12"">
+          <div class="card-body">
+            <h5 class="card-title">Dedetização</h5>
+            <p class="card-text">O Instituto não abrirá dia 23/02, sábado, para dedetização das dependências do prédio.</p>
+          </div>
+        </div>
+<div class="card-columns">
+        <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+            <?php get_template_part('content','card'); ?>
+        <?php endwhile; ?>
+        <?php endif; ?>
+
+        </div> </div>   
 </div>
 <!-- cards fim -->
 
 
 <!-- rodape -->
-<div class="container">
+<div class="container-fluid">
      <div id="rodapeRow" class="sticky-top">
         RODAPÉ
     </div>

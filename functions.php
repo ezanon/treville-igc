@@ -61,7 +61,7 @@ register_nav_menus( array(
     ));
 
 // adiciona tamanhos de imagens personalizados
-add_image_size('bannerImage', 1100/2, 600/2, true); //1100x600 16:9; 1000x500 2:1
+add_image_size('bannerImage', 950, 950/3, true); //1100x600 16:9; 1000x500 2:1
 
 
 
