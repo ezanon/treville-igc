@@ -77,7 +77,9 @@ register_nav_menus( array(
     ));
 
 // adiciona tamanhos de imagens personalizados
-add_image_size('bannerImage', 950, 950/3, true); //1100x600 16:9; 1000x500 2:1
+$altura = 350;
+$largura = 3*$altura;
+add_image_size('bannerImage', $largura, $altura, true); //1100x600 16:9; 1000x500 2:1
 
 
 

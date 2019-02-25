@@ -17,7 +17,9 @@ $color2 : #734719; // laranja escuro
 $color3 : #50564a; // verde escuro
 $color4 : #61675b; // verde medio
 $color5 : #7c8574; // verde claro
-
+/* Imagem banner */
+$altImgBanner : 350;
+/* classes de cores */
 .color1 {
     background-color: $color1;
 }
@@ -113,21 +115,29 @@ a:hover {
 #menuSocial a:hover {
     color: $color1;
 }
+/* Busca */
+#busca.form-control {
+    border-width: 2px;
+    border-color: $color4;
+}
 /* Estrutura */
 body {
     background: $color5;
 }
 /*! Banner */
 #bannerRow {
-    margin: 0 0 10px 0;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-left: auto;
     text-align: center;
     background: $branco;
-    height: 300px;
-    max-height: 300px;
-    min-height: 300px;
+    height: $altImgBanner;
+    max-height: $altImgBanner;
+    min-height: $altImgBanner;
 }
 #bannerRow img {
-    height: 300px;
+    height: $altImgBanner;
 }
 /* Cards */
 #cardsContainer {
@@ -163,6 +173,24 @@ body {
     margin-bottom: 10px;
 }
 
+.carousel-indicators li {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    margin: 10px;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: #0000ff;
+    box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);    
+}
+.carousel-indicators .active {
+    width: 48px;
+    height: 48px;
+    margin: 10px;
+    background-color: #ffff99;
+}
 
 
 

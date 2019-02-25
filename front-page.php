@@ -58,7 +58,7 @@
             <img id="oLogotipo" class="img-fluid mx-auto my-1" src="/wp-content/themes/treville-igc/logo_IGc_colorido.png" alt=""/>
         </a>
         <form role='search' method="get" class="form-inline" action="https://google.com/search">
-            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search" name='q'>
+            <input id="busca" class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search" name='q'>
             <button id='botaoBusca' class="btn my-2 my-sm-0" type="submit"><i class="material-icons">search</i></button>
             <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
             <input type='hidden' name="sitesearch" value="igc.usp.br">
@@ -89,7 +89,8 @@
 </div>
 
 <!-- banner -->
-<div id="bannerRow" class="container-fluid">    
+<div class="container">
+<div id="bannerRow">    
         
             <?php 
                   // banner *start*                  
@@ -100,8 +101,7 @@
                   $my_query_banner = new WP_Query($my_args_banner);
                   if ($my_query_banner->have_posts()) {
                   ?>    
-                  <div class="row">
-                      <div class="col-12">
+
                           <div id="carouselBanners" class="carousel slide" data-ride="carousel">
                               <div class="carousel-inner">    
                   <?php
@@ -123,26 +123,24 @@
                   <?php
                         }
                   ?>
-                  <a class="carousel-control-prev" href="#carouselBanners" role="button" data-slide="prev">
-                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                      <span class="sr-only">Previous</span>
-                                  </a>
-                                  <a class="carousel-control-next" href="#carouselBanners" role="button" data-slide="next">
-                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                      <span class="sr-only">Next</span>
-                                  </a>
+                    <a class="carousel-control-prev" href="#carouselBanners" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselBanners" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
 
-                              </div>
-                          </div>                
-
-                      </div>
-                  </div>                
+                    </div>
+                </div>                
+               
                   <?php
                   }   
                   wp_reset_query(); 
                   ?>          
 
-</div><!-- banner fim -->
+</div></div><!-- banner fim -->
 
 <div class="container">
 
@@ -158,7 +156,7 @@
         <div id="avisosContainer">
         <?php while($my_query_avisos->have_posts()) :?>        
     
-            <div class="card col-md-12 col-sm-6 col-12 text-center">
+            <div class="card text-center">
                 <div class="card-body">
                     <?php $my_query_avisos->the_post(); ?>
                     <h5 class="card-title"><?php the_title(); ?></h5>
@@ -170,7 +168,8 @@
             
         </div>
 
-<?php endif; ?>
+<?php endif; 
+wp_reset_query(); ?>
 <!-- avisos fim -->
 
 <!-- cards -->
@@ -180,7 +179,8 @@
                 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
                     <?php get_template_part('content','card'); ?>
                 <?php endwhile; ?>
-                <?php endif; ?>
+                <?php endif; 
+                wp_reset_query(); ?>
 
         </div> </div>   
 </div>
