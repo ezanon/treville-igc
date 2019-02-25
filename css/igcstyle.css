@@ -25,6 +25,13 @@ and open the template in the editor.
 .color5 {
   background-color: #7c8574; }
 
+/* HTML */
+a {
+  color: #734719; }
+
+a:hover {
+  color: #ed8838; }
+
 /* Tipografia */
 /* Background escuro */
 /* Cabecalho Home */
@@ -108,7 +115,7 @@ body {
 
 /* Cards */
 #cardsContainer {
-  padding: 10px 20px 0 20px; }
+  padding: 10px 10px 0 10px; }
 
 #cardsContainer .card {
   margin: 0 0 10px 0;
@@ -118,6 +125,16 @@ body {
   border-color: #7c8574;
   border-style: solid;
   border-radius: 0.5rem; }
+
+#cardsContainer img {
+  border-radius: 0; }
+
+/* Avisos */
+#avisosContainer .card {
+  background-color: #fcfcfc;
+  border-top-color: #ed8838;
+  border-top-width: medium;
+  margin-bottom: 0.5rem; }
 
 /* Rodape */
 #rodapeRow {

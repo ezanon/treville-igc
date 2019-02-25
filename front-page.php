@@ -144,26 +144,49 @@
 
 </div><!-- banner fim -->
 
-<!-- cards -->
-<div id='cardsContainer' class="container">
-    <div class="row">
-        
-        <div class="card col-md-12 col-sm-6 col-12"">
-          <div class="card-body">
-            <h5 class="card-title">Dedetização</h5>
-            <p class="card-text">O Instituto não abrirá dia 23/02, sábado, para dedetização das dependências do prédio.</p>
-          </div>
-        </div>
-<div class="card-columns">
-        <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-            <?php get_template_part('content','card'); ?>
+<div class="container">
+
+<!-- avisos -->
+
+<?php                  
+    $my_args_avisos = array(
+        'post_type' => 'aviso',
+        'posts_per_page' => 2
+    );
+    $my_query_avisos = new WP_Query($my_args_avisos);
+    if ($my_query_avisos->have_posts()) : ?>
+        <div id="avisosContainer">
+        <?php while($my_query_avisos->have_posts()) :?>        
+    
+            <div class="card col-md-12 col-sm-6 col-12 text-center">
+                <div class="card-body">
+                    <?php $my_query_avisos->the_post(); ?>
+                    <h5 class="card-title"><?php the_title(); ?></h5>
+                    <p class="card-text"><?php the_excerpt(); ?></p>
+                </div>
+            </div>
+            
         <?php endwhile; ?>
-        <?php endif; ?>
+            
+        </div>
+
+<?php endif; ?>
+<!-- avisos fim -->
+
+<!-- cards -->
+<div id='cardsContainer'>
+    <div class="row">  
+        <div class="card-columns">
+                <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+                    <?php get_template_part('content','card'); ?>
+                <?php endwhile; ?>
+                <?php endif; ?>
 
         </div> </div>   
 </div>
 <!-- cards fim -->
 
+</div>
 
 <!-- rodape -->
 <div class="container-fluid">

@@ -45,6 +45,22 @@ function create_post_type() {
         'rewrite' => array('slug' => 'historico')
             )
     );
+    register_post_type('aviso', array(
+        'labels' => array(
+            'name' => __('Avisos'),
+            'singular_name' => __('Aviso')
+        ),
+        'supports' => array(
+            'title', 'excerpt'
+        ),
+        'public' => true,
+        'exclude_from_search' => true,
+        'menu_position' => 5,
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-images-alt2',
+        'rewrite' => array('slug' => 'aviso')
+            )
+    );
 }
 add_action('init', 'create_post_type');
 
