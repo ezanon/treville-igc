@@ -19,7 +19,8 @@ function create_post_type() {
             'singular_name' => __('Banner')
         ),
         'supports' => array(
-            'title', 'thumbnail', 'excerpt', 'custom-fields'
+            //'title', 'thumbnail', 'excerpt', 'custom-fields'
+            'title','custom-fields'
         ),
         'public' => true,
         'exclude_from_search' => true,

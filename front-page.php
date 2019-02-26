@@ -89,86 +89,18 @@
 </div>
 
 <!-- banner -->
-   
-        
-            <?php 
-                  // banner *start*                  
-                  $my_args_banner = array(
-                      'post_type' => 'banners',
-                      'posts_per_page' => 5
-                  );
-                  $my_query_banner = new WP_Query($my_args_banner);
-                  if ($my_query_banner->have_posts()) {
-                  ?>    
-                    <div class="container">
-                        <div id="bannerRow"> 
-                          <div id="carouselBanners" class="carousel slide" data-ride="carousel">
-                              <div class="carousel-inner">    
-                  <?php
-                      $contapost = 0;
-                      while ($my_query_banner->have_posts()) {
-                          $contapost++;
-                          $my_query_banner->the_post();  
-                          $link = get_post_meta( $post->ID, 'Link', TRUE );
-                  ?>        
-                            <div class="carousel-item mx-auto <?php if ($contapost == 1) echo 'active'; ?>">
-                                <a href="<?php echo $link; ?>">
-                                    <?php the_post_thumbnail('bannerImage', array('class' => 'img-fluid d-block mx-auto align-middle')); ?>
-                                </a>
-                                <div class="carousel-caption d-none d-md-block invisible">
-                                    <h5><?php the_title(); ?></h5>
-                                    <?php the_excerpt(); ?>
-                                </div>
-                            </div> 
-                  <?php
-                        }
-                  ?>
-                    <a class="carousel-control-prev" href="#carouselBanners" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselBanners" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-
-                    </div></div></div></div>
-               
-                  <?php
-                  }   
-                  wp_reset_query(); 
-                  ?>          
-
+<?php 
+get_template_part('content','banner'); 
+?>             
 <!-- banner fim -->
+
 
 <div class="container">
 
 <!-- avisos -->
-
-<?php                  
-    $my_args_avisos = array(
-        'post_type' => 'aviso',
-        'posts_per_page' => 2
-    );
-    $my_query_avisos = new WP_Query($my_args_avisos);
-    if ($my_query_avisos->have_posts()) : ?>
-        <div id="avisosContainer">
-        <?php while($my_query_avisos->have_posts()) :?>        
-    
-            <div class="card text-center">
-                <div class="card-body">
-                    <?php $my_query_avisos->the_post(); ?>
-                    <h5 class="card-title"><?php the_title(); ?></h5>
-                    <p class="card-text"><?php the_excerpt(); ?></p>
-                </div>
-            </div>
-            
-        <?php endwhile; ?>
-            
-        </div>
-
-<?php endif; 
-wp_reset_query(); ?>
+<?php 
+get_template_part('content','aviso'); 
+?>   
 <!-- avisos fim -->
 
 <!-- cards -->
