@@ -73,7 +73,8 @@ register_nav_menus( array(
         'socialMenu' => __('igc Menu Mídias Sociais','treville-igc'),
         'idiomasMenu' => __('igc Menu Idiomas','treville-igc'),
         'superiorMenu' => __('igc Menu Superior','treville-igc'),
-    
+        'uteisMenu' => __('igc Menu Úteis','treville-igc'),
+        'visiteMenu' => __('igc Menu Visite','treville-igc')
     ));
 
 // adiciona tamanhos de imagens personalizados

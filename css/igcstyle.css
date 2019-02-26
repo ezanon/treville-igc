@@ -55,7 +55,7 @@ a:hover {
 
 /* Navegação principal */
 #mainNavbar {
-  font-size: 1rem; }
+  font-size: 1.2rem; }
 
 #mainNavbar a {
   color: #fcfcfc; }
@@ -153,12 +153,50 @@ body {
   background-color: #50564a;
   padding: 10px; }
 
-/* Botoes posts */
+/* Menus rodape */
+#visiteMenu, #uteisMenu {
+  background-color: #61675b;
+  padding: 1rem;
+  color: #7c8574; }
+
+#visiteMenu a, #uteisMenu a {
+  color: #fcfcfc;
+  opacity: 0.6; }
+
+#visiteMenu a:hover, #uteisMenu a:hover {
+  color: #ed8838; }
+
+/* creditos */
+#rodapeCreditos {
+  border-top-color: #7c8574;
+  border-top-width: thin;
+  border-top-style: solid;
+  color: #7c8574; }
+
+#rodapeCreditos a {
+  color: #fcfcfc; }
+
+#rodapeCreditos a:hover {
+  color: #ed8838; }
+
 /* Bootstrap */
 .row {
   margin-bottom: 10px; }
 
 .mb-6 {
   margin-bottom: 4rem; }
+
+/* Opacidades */
+.op2 {
+  opacity: 0.2; }
+
+.op4 {
+  opacity: 0.4; }
+
+.op6 {
+  opacity: 0.6; }
+
+.op8 {
+  opacity: 0.8; }
 
 /*# sourceMappingURL=igcstyle.css.map */

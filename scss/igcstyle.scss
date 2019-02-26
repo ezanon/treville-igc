@@ -71,7 +71,7 @@ a:hover {
 }
 /* Navegação principal */
 #mainNavbar {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 #mainNavbar a {
     color: $branco;
@@ -169,7 +169,32 @@ body {
     background-color: $color3;
     padding: 10px; 
 }
-/* Botoes posts */
+/* Menus rodape */
+#visiteMenu, #uteisMenu {
+    background-color: $color4;
+    padding: 1rem;
+    color: $color5;
+}
+#visiteMenu a, #uteisMenu a {
+    color: $branco;
+    opacity: 0.6;
+}
+#visiteMenu a:hover, #uteisMenu a:hover {
+    color: $color1;
+}
+/* creditos */
+#rodapeCreditos {
+    border-top-color: $color5;
+    border-top-width: thin;
+    border-top-style: solid;
+    color: $color5;
+}
+#rodapeCreditos a {
+    color: $branco;
+}
+#rodapeCreditos a:hover {
+    color: $color1;
+}
 
 /* Bootstrap */
 .row {
@@ -178,6 +203,20 @@ body {
 $spacer : 1rem;
 .mb-6 {
     margin-bottom: $spacer*4;
+}
+
+/* Opacidades */
+.op2 {
+    opacity: 0.2;
+}
+.op4 {
+    opacity: 0.4;
+}
+.op6 {
+    opacity: 0.6;
+}
+.op8 {
+    opacity: 0.8;
 }
 
 

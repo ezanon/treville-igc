@@ -26,7 +26,7 @@
                     'container'         => 'div',
                     'container_class'   => 'collapse navbar-collapse',
                     'container_id'      => 'idiomasNavbar',
-                    'menu_class'        => 'nav navbar-nav',
+                    'menu_class'        => 'nav navbar-nav op8',
                     'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                     'walker'            => new WP_Bootstrap_Navwalker(),
             ) );
@@ -41,7 +41,7 @@
                     'container'         => 'div',
                     'container_class'   => 'collapse navbar-collapse',
                     'container_id'      => 'socialNavbar',
-                    'menu_class'        => 'nav navbar-nav',
+                    'menu_class'        => 'nav navbar-nav op8',
                     'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                     'walker'            => new WP_Bootstrap_Navwalker(),
             ) );
@@ -189,11 +189,44 @@ wp_reset_query(); ?>
 </div>
 
 <!-- rodape -->
-<div class="container-fluid">
      <div id="rodapeRow" class="sticky-top">
-        RODAPÉ
+         <div class="row justify-content-center">
+             <div class="col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3 mt-1">
+                <?php
+                 wp_nav_menu(array(
+                     'theme_location' => 'uteisMenu',
+                     'depth' => 3,
+                     'container' => 'div',
+                     'container_class' => 'rounded',
+                     'container_id' => 'uteisMenu',
+                     'menu_class' => 'nav navbar-nav',
+                     'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+                     'walker' => new WP_Bootstrap_Navwalker(),
+                 ));
+                 ?>  
+             </div>
+             <div class="col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3 mt-1">
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'visiteMenu',
+                    'depth' => 3,
+                    'container' => 'div',
+                    'container_class' => 'rounded',
+                    'container_id' => 'visiteMenu',
+                    'menu_class' => 'nav navbar-nav',
+                    'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+                    'walker' => new WP_Bootstrap_Navwalker(),
+                ));
+                ?> 
+             </div>
+         </div>
+         <div id="rodapeCreditos" class="text-center">
+             Direitos Reservados © 1999-<?php echo date('Y');?> 
+             Instituto de Geociências - Universidade de São Paulo 
+             :: <a href='/creditos' class="op6">Créditos</a>
+         </div>
     </div>
-</div>
+
 <!-- rodape fim -->
 
 <!-- Optional JavaScript -->
