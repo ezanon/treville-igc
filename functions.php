@@ -77,9 +77,23 @@ register_nav_menus( array(
     ));
 
 // adiciona tamanhos de imagens personalizados
-$altura = 350;
+$altura = 370;
 $largura = 3*$altura;
-add_image_size('bannerImage', $largura, $altura, true); //1100x600 16:9; 1000x500 2:1
+add_image_size('bannerImage', $largura, $altura, false); //1100x600 16:9; 1000x500 2:1
+// tamanho do thumbnail
+set_post_thumbnail_size(1280, 720, true);
 
+/* tamanho do resumo
+add_filter('excerpt_length', function($length){
+    return 5;
+});*/
 
-
+// definir paginação
+add_filter('next_posts_link_attributes','posts_link_attributes_next');
+add_filter('previous_posts_link_attributes','posts_link_attributes_previous');
+function posts_link_attributes_next(){
+    return 'id="btnPosts" class="btn btn-outline color3 float-right ml-3"';
+}
+function posts_link_attributes_previous(){
+    return 'id="btnPosts" class="btn btn-outline color3 float-right"';
+}

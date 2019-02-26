@@ -116,12 +116,12 @@ body {
   margin-left: auto;
   text-align: center;
   background: #fcfcfc;
-  height: 350;
-  max-height: 350;
-  min-height: 350; }
+  height: 370;
+  max-height: 370;
+  min-height: 370; }
 
 #bannerRow img {
-  height: 350; }
+  height: 370; }
 
 /* Cards */
 #cardsContainer {
@@ -144,7 +144,8 @@ body {
   background-color: #fcfcfc;
   border-top-color: #ed8838;
   border-top-width: medium;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem; }
 
 /* Rodape */
 #rodapeRow {
@@ -152,26 +153,12 @@ body {
   background-color: #50564a;
   padding: 10px; }
 
+/* Botoes posts */
 /* Bootstrap */
 .row {
   margin-bottom: 10px; }
 
-.carousel-indicators li {
-  display: inline-block;
-  width: 48px;
-  height: 48px;
-  margin: 10px;
-  text-indent: 0;
-  cursor: pointer;
-  border: none;
-  border-radius: 50%;
-  background-color: #0000ff;
-  box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5); }
-
-.carousel-indicators .active {
-  width: 48px;
-  height: 48px;
-  margin: 10px;
-  background-color: #ffff99; }
+.mb-6 {
+  margin-bottom: 4rem; }
 
 /*# sourceMappingURL=igcstyle.css.map */

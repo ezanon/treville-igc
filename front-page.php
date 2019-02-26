@@ -10,7 +10,7 @@
     <!-- icones -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- IGc -->
-    <link href="wp-content/themes/treville-igc/css/igcstyle.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/igcstyle.css" rel="stylesheet" type="text/css"/>
     
   </head>
 
@@ -89,8 +89,7 @@
 </div>
 
 <!-- banner -->
-<div class="container">
-<div id="bannerRow">    
+   
         
             <?php 
                   // banner *start*                  
@@ -101,7 +100,8 @@
                   $my_query_banner = new WP_Query($my_args_banner);
                   if ($my_query_banner->have_posts()) {
                   ?>    
-
+                    <div class="container">
+                        <div id="bannerRow"> 
                           <div id="carouselBanners" class="carousel slide" data-ride="carousel">
                               <div class="carousel-inner">    
                   <?php
@@ -132,15 +132,14 @@
                         <span class="sr-only">Next</span>
                     </a>
 
-                    </div>
-                </div>                
+                    </div></div></div></div>
                
                   <?php
                   }   
                   wp_reset_query(); 
                   ?>          
 
-</div></div><!-- banner fim -->
+<!-- banner fim -->
 
 <div class="container">
 
@@ -181,8 +180,9 @@ wp_reset_query(); ?>
                 <?php endwhile; ?>
                 <?php endif; 
                 wp_reset_query(); ?>
-
-        </div> </div>   
+                <?php next_posts_link('Mais antigos'); ?> <?php previous_posts_link('Mais recentes'); ?>
+        </div></div>   
+    
 </div>
 <!-- cards fim -->
 

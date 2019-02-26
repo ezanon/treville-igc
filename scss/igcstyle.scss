@@ -18,7 +18,7 @@ $color3 : #50564a; // verde escuro
 $color4 : #61675b; // verde medio
 $color5 : #7c8574; // verde claro
 /* Imagem banner */
-$altImgBanner : 350;
+$altImgBanner : 370;
 /* classes de cores */
 .color1 {
     background-color: $color1;
@@ -161,6 +161,7 @@ body {
     border-top-color: $color1;
     border-top-width: medium;
     margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
 }
 /* Rodape */
 #rodapeRow {
@@ -168,29 +169,17 @@ body {
     background-color: $color3;
     padding: 10px; 
 }
+/* Botoes posts */
+
 /* Bootstrap */
 .row {
     margin-bottom: 10px;
 }
+$spacer : 1rem;
+.mb-6 {
+    margin-bottom: $spacer*4;
+}
 
-.carousel-indicators li {
-    display: inline-block;
-    width: 48px;
-    height: 48px;
-    margin: 10px;
-    text-indent: 0;
-    cursor: pointer;
-    border: none;
-    border-radius: 50%;
-    background-color: #0000ff;
-    box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);    
-}
-.carousel-indicators .active {
-    width: 48px;
-    height: 48px;
-    margin: 10px;
-    background-color: #ffff99;
-}
 
 
 
