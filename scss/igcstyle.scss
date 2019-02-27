@@ -18,7 +18,7 @@ $color3 : #50564a; // verde escuro
 $color4 : #61675b; // verde medio
 $color5 : #7c8574; // verde claro
 /* Imagem banner */
-$altImgBanner : 370;
+$altImgBanner : 370px;
 /* classes de cores */
 .color1 {
     background-color: $color1;
@@ -131,13 +131,13 @@ body {
     margin-bottom: 10px;
     margin-left: auto;
     text-align: center;
-    background: $branco;
-    height: $altImgBanner;
     max-height: $altImgBanner;
-    min-height: $altImgBanner;
+    background-color: $color5;
+    background-image: url("http://sites.igc.usp.br/wp-content/uploads/2019/02/bannerIGcBackground.jpg");
+    background-size: cover;  
 }
 #bannerRow img {
-    height: $altImgBanner;
+    max-height: $altImgBanner;
 }
 /* Cards */
 #cardsContainer {

@@ -115,13 +115,13 @@ body {
   margin-bottom: 10px;
   margin-left: auto;
   text-align: center;
-  background: #fcfcfc;
-  height: 370;
-  max-height: 370;
-  min-height: 370; }
+  max-height: 370px;
+  background-color: #7c8574;
+  background-image: url("http://sites.igc.usp.br/wp-content/uploads/2019/02/bannerIGcBackground.jpg");
+  background-size: cover; }
 
 #bannerRow img {
-  height: 370; }
+  max-height: 370px; }
 
 /* Cards */
 #cardsContainer {
