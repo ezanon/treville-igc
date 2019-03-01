@@ -36,6 +36,11 @@ a:hover {
 
 /* Tipografia */
 /* Background escuro */
+/* ladrilho de fundo */
+.ladrilho {
+  background-image: url("http://sites.igc.usp.br/wp-content/uploads/2019/02/bannerIGcBackground.jpg");
+  background-repeat: repeat; }
+
 /* Cabecalho Home */
 #cabecalhoHome {
   color: #fcfcfc;
@@ -55,7 +60,8 @@ a:hover {
 
 /* Navegação principal */
 #mainNavbar {
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  z-index: 9999; }
 
 #mainNavbar a {
   color: #fcfcfc; }
@@ -198,5 +204,10 @@ body {
 
 .op8 {
   opacity: 0.8; }
+
+/* google material icons */
+.material-icons {
+  color: #fcfcfc;
+  font-size: 1.8rem; }
 
 /*# sourceMappingURL=igcstyle.css.map */

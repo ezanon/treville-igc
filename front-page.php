@@ -18,7 +18,8 @@
       
 <!-- menus auxiliares -->
 <div id='menuSuperior' class="container-fluid color3">
-    <nav id='menuIdiomas' class="navbar navbar-expand-md">
+    <nav id='menuIdiomas' class="navbar navbar-expand">
+        <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
         <?php
             wp_nav_menu( array(
                     'theme_location'    => 'idiomasMenu',
@@ -31,9 +32,11 @@
                     'walker'            => new WP_Bootstrap_Navwalker(),
             ) );
         ?>
+        </div>
     </nav>
 
-    <nav id='menuSocial' class="navbar navbar-expand-md">
+    <nav id='menuSocial' class="navbar navbar-expand">
+        <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
         <?php
             wp_nav_menu( array(
                     'theme_location'    => 'socialMenu',
@@ -46,12 +49,12 @@
                     'walker'            => new WP_Bootstrap_Navwalker(),
             ) );
         ?>
+        </div>
     </nav>
 </div>
       
 <!-- cabecalho -->     
 <div id="cabecalhoHome" class="container-fluid">
-   
     
     <nav class="navbar container">
         <a class="navbar-brand" href="/">
@@ -65,26 +68,26 @@
         </form>           
     </nav>
     
-        <nav class="navbar navbar-expand-md color2">
-            <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
- 
-            <?php
-                wp_nav_menu( array(
-                        'theme_location'    => 'mainMenu',
-                        'depth'             => 3,
-                        'container'         => 'div',
-                        'container_class'   => 'collapse navbar-collapse',
-                        'container_id'      => 'mainNavbar',
-                        'menu_class'        => 'nav navbar-nav',
-                        'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-                        'walker'            => new WP_Bootstrap_Navwalker(),
-                ) );
-                ?>
-            </div>                     
-        </nav>
+    <nav class="navbar navbar-expand-lg color2">
+        <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="material-icons op8">menu</i>
+        </button>
+
+        <?php
+            wp_nav_menu( array(
+                    'theme_location'    => 'mainMenu',
+                    'depth'             => 2,
+                    'container'         => 'div',
+                    'container_class'   => 'collapse navbar-collapse',
+                    'container_id'      => 'mainNavbar',
+                    'menu_class'        => 'nav navbar-nav mr-auto',
+                    'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                    'walker'            => new WP_Bootstrap_Navwalker(),
+            ) );
+            ?>
+        </div>                     
+    </nav>
                  
 </div>
 
@@ -122,7 +125,7 @@ get_template_part('content','aviso');
 
 <!-- rodape -->
      <div id="rodapeRow" class="sticky-top">
-         <div class="row justify-content-center">
+         <div class="row justify-content-center ml-0 mr-0">
              <div class="col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3 mt-1">
                 <?php
                  wp_nav_menu(array(
