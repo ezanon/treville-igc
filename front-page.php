@@ -109,15 +109,15 @@ get_template_part('content','aviso');
 <!-- cards -->
 <div id='cardsContainer'>
     <div class="row">  
-        <div class="card-columns">
+        <!--<div class="card-columns">-->
                 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
                     <?php get_template_part('content','card'); ?>
                 <?php endwhile; ?>
                 <?php endif; 
                 wp_reset_query(); ?>
                 <?php next_posts_link('Mais antigos'); ?> <?php previous_posts_link('Mais recentes'); ?>
-        </div></div>   
-    
+        </div>
+    <!--</div>-->   
 </div>
 <!-- cards fim -->
 

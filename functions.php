@@ -1,9 +1,48 @@
-<?php 
+<?php
 
-add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' ); 
-function enqueue_parent_styles() { 
-    wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' ); 
-} 
+add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
+function enqueue_parent_styles() {
+    wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
+}
+
+function my_mime_types($mime_types){
+$mime_types[‘doc’] = ‘application/msword’;
+$mime_types[‘docx’] = ‘application/vnd.openxmlformats-officedocument.wordprocessingml.document’;
+$mime_types[‘rar’] = ‘application/x-rar-compressed’;
+$mime_types[‘tar’] = ‘application/x-tar’;
+$mime_types[‘gz’] = ‘application/x-gzip’;
+$mime_types[‘gzip’] = ‘application/x-gzip’;
+$mime_types[‘tiff’] = ‘image/tiff’;
+$mime_types[‘tif’] = ‘image/tiff’;
+$mime_types[‘bmp’] = ‘image/bmp’;
+$mime_types[‘svg’] = ‘image/svg+xml’;
+$mime_types[‘psd’] = ‘image/vnd.adobe.photoshop’;
+$mime_types[‘ai’] = ‘application/postscript’;
+//$mime_types[‘indd’] = ‘application/x-indesign’; // not official, but might still work
+$mime_types[‘eps’] = ‘application/postscript’;
+$mime_types[‘rtf’] = ‘application/rtf’;
+$mime_types[‘txt’] = ‘text/plain’;
+$mime_types[‘wav’] = ‘audio/x-wav’;
+$mime_types[‘csv’] = ‘text/csv’;
+$mime_types[‘xml’] = ‘application/xml’;
+//$mime_types[‘flv’] = ‘video/x-flv’;
+//$mime_types[‘swf’] = ‘application/x-shockwave-flash’;
+$mime_types[‘vcf’] = ‘text/x-vcard’;
+//$mime_types[‘html’] = ‘text/html’;
+//$mime_types[‘htm’] = ‘text/html’;
+//$mime_types[‘css’] = ‘text/css’;
+//$mime_types[‘js’] = ‘application/javascript’;
+$mime_types[‘ico’] = ‘image/x-icon’;
+//$mime_types[‘otf’] = ‘application/x-font-otf’;
+//$mime_types[‘ttf’] = ‘application/x-font-ttf’;
+//$mime_types[‘woff’] = ‘application/x-font-woff’;
+//$mime_types[‘ics’] = ‘text/calendar’;
+$mime_types['epub'] = 'application/epub+zip';
+return $mime_types;
+}
+// tirei
+//add_filter(‘upload_mimes’, ‘my_mime_types’, 1, 1);
+
 
 // adicionar formato de posts
 function igc_theme_support(){
@@ -30,22 +69,22 @@ function create_post_type() {
         'rewrite' => array('slug' => 'banners')
             )
     );
-    register_post_type('historico', array(
-        'labels' => array(
-            'name' => __('Histórico'),
-            'singular_name' => __('História')
-        ),
-        'supports' => array(
-            'title', 'custom-fields'
-        ),
-        'public' => true,
-        'exclude_from_search' => false,
-        'menu_position' => 5,
-        'has_archive' => true,
-        'menu_icon' => 'dashicons-images-alt2',
-        'rewrite' => array('slug' => 'historico')
-            )
-    );
+//    register_post_type('historico', array(
+//        'labels' => array(
+//            'name' => __('Histórico'),
+//            'singular_name' => __('História')
+//        ),
+//        'supports' => array(
+//            'title', 'custom-fields'
+//        ),
+//        'public' => true,
+//        'exclude_from_search' => false,
+//        'menu_position' => 5,
+//        'has_archive' => true,
+//        'menu_icon' => 'dashicons-images-alt2',
+//        'rewrite' => array('slug' => 'historico')
+//            )
+//    );
     register_post_type('aviso', array(
         'labels' => array(
             'name' => __('Avisos'),
