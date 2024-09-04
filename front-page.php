@@ -15,6 +15,9 @@
   </head>
 
 <body>
+    
+<?php //do_action( 'wp_body_open' ); ?>
+<?php //do_action( 'treville_before_site' ); ?>
       
 <!-- menus auxiliares -->
 <div id='menuSuperior' class="container-fluid color3">
@@ -37,6 +40,17 @@
 
     <nav id='menuSocial' class="navbar navbar-expand">
         <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
+<div style="display: flex; align-items: center;">
+    <!-- Instagram Icon -->
+    <a href="https://www.instagram.com/igcusp" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 16px; height: 16px; margin-right: 8px;">
+    </a>
+    <!-- Facebook Icon -->
+    <a href="https://www.facebook.com/igcusp" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" style="width: 16px; height: 16px;">
+    </a>
+</div>
+ 
         <?php
             wp_nav_menu( array(
                     'theme_location'    => 'socialMenu',
@@ -77,7 +91,7 @@
         <?php
             wp_nav_menu( array(
                     'theme_location'    => 'mainMenu',
-                    'depth'             => 2,
+                    'depth'             => 3,
                     'container'         => 'div',
                     'container_class'   => 'collapse navbar-collapse',
                     'container_id'      => 'mainNavbar',
