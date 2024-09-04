@@ -40,7 +40,7 @@
 
     <nav id='menuSocial' class="navbar navbar-expand">
         <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
-<div style="display: flex; align-items: center;">
+<div style="display: flex; align-items: center; margin-right: 8px;">
     <!-- Instagram Icon -->
     <a href="https://www.instagram.com/igcusp" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 16px; height: 16px; margin-right: 8px;">
