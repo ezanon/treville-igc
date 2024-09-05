@@ -11,6 +11,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- IGc -->
     <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/igcstyle.css" rel="stylesheet" type="text/css"/>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XDTBVEN3Y"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7XDTBVEN3Y');
+    </script>
+
+    
     <?php //wp_head(); ?>
   </head>
 
