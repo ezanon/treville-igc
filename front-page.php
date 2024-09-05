@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- IGc -->
     <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/igcstyle.css" rel="stylesheet" type="text/css"/>
-    
+    <?php //wp_head(); ?>
   </head>
 
 <body>
@@ -184,6 +184,8 @@ get_template_part('content','aviso');
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   
+<?php wp_footer(); ?>
+
 </body>
 
 </html>
